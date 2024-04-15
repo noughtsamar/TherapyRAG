@@ -26,7 +26,7 @@ def main():
 
     # Prepare the DB.
     embedding_function = OpenAIEmbeddings(
-        openai_api_key='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')
+        openai_api_key='')
     db = Chroma(persist_directory=CHROMA_PATH,
                 embedding_function=embedding_function)
 
@@ -43,7 +43,7 @@ def main():
     print(prompt)
 
     model = ChatOpenAI(
-        openai_api_key='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')
+        openai_api_key='')
     response_text = model.predict(prompt)
     formatted_response = f"Response: {response_text}\n"
     print(formatted_response)
